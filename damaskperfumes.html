@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damask Perfumes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* --- Reset & Base Styles --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --primary-green: #335a52; /* Deep green from the image */
+        --secondary-bg: #f7f8fa; /* Light gray for buttons */
+        --text-dark: #333333;
+        --text-light: #666666;
+        --facebook-blue: #4267b2;
+        --snapchat-yellow: #fffc00;
+        --whatsapp-green: #25d366;
+        --instagram-gradient: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        --catalog-gradient: linear-gradient(
+          45deg,
+          #4f8076 0%,
+          #335a52 50%,
+          #243f3a 100%
+        );
+      }
+
+      body {
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        /* Create the split background effect */
+        background: linear-gradient(
+          to bottom,
+          var(--primary-green) 280px,
+          #ffffff 280px
+        );
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* --- Main Container --- */
+      .container {
+        width: 100%;
+        max-width: 500px; /* Restrict width on large screens */
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* --- Logo Card --- */
+      .logo-card {
+        background-color: var(--primary-green);
+        width: 220px;
+        height: 220px;
+        margin: 140px auto 40px; /* Top margin pushes it down to overlap the background split */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      .logo-card img {
+        width: 220px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .logo-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      /* Imitating the specific logo text style */
+      .logo-text-arabic {
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+
+      .logo-text-english {
+        font-size: 20px;
+        letter-spacing: 3px;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      /* --- Text Content --- */
+      h1 {
+        color: var(--text-dark);
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .description {
+        color: var(--text-light);
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        padding: 0 10px;
+      }
+
+      .find-me-label {
+        color: var(--text-dark);
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: left; /* Align this specific label to the left */
+        padding-left: 5px;
+      }
+
+      /* --- Social Buttons --- */
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .social-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-bg);
+        padding: 18px 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition:
+          background-color 0.2s ease,
+          transform 0.1s ease;
+      }
+
+      .social-button:hover {
+        background-color: #eaecf0;
+      }
+
+      .social-button:active {
+        transform: scale(0.99);
+      }
+
+      .social-left {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .social-icon {
+        font-size: 24px;
+        margin-right: 15px;
+        width: 30px;
+        text-align: center;
+      }
+
+      .fa-facebook {
+        color: var(--facebook-blue);
+      }
+
+      /* Needed a wrapper to apply gradient to font awesome icon correctly */
+      .instagram-icon-wrapper {
+        background: var(--instagram-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .fa-snapchat {
+        color: var(--snapchat-yellow);
+      }
+
+      .fa-whatsapp {
+        color: var(--whatsapp-green);
+      }
+
+      .catalog-icon-wrapper {
+        background: var(--catalog-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      .arrow-icon {
+        color: #999;
+        font-size: 18px;
+      }
+
+      /* --- Responsiveness --- */
+      @media (max-width: 480px) {
+        .container {
+          padding: 15px;
+        }
+        background: linear-gradient(
+          to bottom,
+          var(--primary-green) 220px,
+          #ffffff 220px
+        );
+        .logo-card {
+          width: 180px;
+          height: 180px;
+          margin-top: 110px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="logo-card">
+        <img src="damask-logo.jpg" alt="Damask Perfumes" />
+      </div>
+
+      <h1>Damask perfumes</h1>
+
+      <p class="description">
+        Your new destination for captivating fragrances crafted with the finest
+        oil essences from the world's most renowned fragrance companies.
+      </p>
+
+      <div class="find-me-label">Find me on</div>
+
+      <div class="social-links">
+        <a
+          href="https://wa.me/962798369130"
+          class="social-button"
+          target="_blank"
+        >
+          <div class="social-left">
+            <i class="fa-brands fa-whatsapp social-icon"></i>
+            <span>Whatsapp</span>
+          </div>
+          <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61584930564391"
+          class="social-button"
+          target="_blank"
+        >
+          <div class="social-left">
+            <i class="fa-brands fa-facebook social-icon"></i>
+            <span>Facebook</span>
+          </div>
+          <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/damaskperfume/"
+          class="social-button"
+          target="_blank"
+        >
+          <div class="social-left">
+            <span class="social-icon instagram-icon-wrapper">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+            <span>Instagram</span>
+          </div>
+          <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+        </a>
+
+        <a
+          href="https://www.snapchat.com/@damaskperfumes/"
+          class="social-button"
+          target="_blank"
+        >
+          <div class="social-left">
+            <div class="social-left">
+              <i class="fa-brands fa-snapchat social-icon"></i>
+              <span>Snapchat</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+        </a>
+
+        <a
+          href="https://isocial.page/damask-perfumes-catalog.pdf"
+          class="social-button"
+          target="_blank"
+        >
+          <div class="social-left">
+            <span class="social-icon catalog-icon-wrapper">
+              <i class="fa-solid fa-folder-open"></i>
+            </span>
+            <span>Damask Catalog</span>
+          </div>
+          <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
